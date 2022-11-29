@@ -1,0 +1,641 @@
+<!--MatthewAnderson-->
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
+/*Mobile Design*/
+
+@media only screen and (min-width:320px) {
+
+		nav{
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+	nav ul{
+		margin: 0;
+		display: none;
+	}	
+
+	#toggle:checked~label~ul{
+		display: block;
+		position: fixed;
+		top: 6ex;
+		left: 0;
+		width: 100vw;
+		Background-color: #55BCD5;
+
+	}
+
+	#toggle:checked ~label{
+		position: fixed;
+		top: 0;
+		left:0;
+		height: 5ex;
+		width: 100vw;
+		padding: 0;
+		padding-top: 1ex;
+		background-color: black;
+		color: white;
+		transition: all .2s;
+	}
+
+	#toggle:checked ~ label ~ ul li{
+		border-bottom: 1px solid black;
+		padding: 4ex;
+		text-align: center;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	label[for="toggle"]{
+		display:block;
+		padding: 20px;
+		background:#F6D64A; 
+	}
+	#skip{
+		position:absolute;
+		left:-10000px;
+		top:auto;
+		width:1px;
+		height:1px;
+		overflow:hidden;
+	}
+
+	header{
+		background-image: linear-gradient(#55BCD5, white);
+	}
+	h1{
+		font-size: 50px;
+		padding: 0.5em;
+		font-family: 'Molle', cursive;
+	}
+
+	.sr-only{
+		position:absolute;
+		left:-10000px;
+		top:auto;
+		width:1px;
+		height:1px;
+		overflow:hidden;
+
+	}
+
+
+	#intro h2{
+		font-family: 'Molle', cursive;
+		font-size: 30px;
+		padding-top: 20px;
+	}
+
+	#menu{
+		background-color:#F6D64A;
+		float: right;
+	}
+		
+
+	p, q{
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	#plan{
+		background-color:#F6D64A;
+		
+	}
+
+	#plan img {
+			width: 60%;
+			margin: auto;
+			display: block;
+			padding: 10px;
+			background-color:#55BCD5;
+			border: solid white 5px;
+			border-radius: 10px;
+	}
+
+	#plan h3{
+		font-family: 'Molle', cursive;
+		font-size: 30px;
+		text-align: center;
+	}
+
+	#plan h4{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 20px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+
+	#testimonials{
+		align-content: center;
+		padding-top: 60px;
+		margin: 0 auto;
+	}
+
+	#testimonials section{
+		padding-top: 100px;
+	}
+
+	img[src="images/miranda-blake.png"]{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img[src="images/max-winter.png"]{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img[src="images/carmen-lorenzo.png"]{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img[src="images/ines-villegoes.png"]{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#testimonials{
+		display: flex;
+		margin-right: 100px;
+		
+	}
+	#testimonials h3{
+		font-family: 'Molle', cursive;
+		font-size: 30px;
+	text-align: center;
+	}
+
+	#testimonials h4{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 30px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	#about{
+		background-color: #499BD2;
+		font-family: 'Molle', cursive;
+		font-size: 20px;
+		display: grid;
+		margin-right: auto;
+		margin-left: auto;
+	text-align: center;
+	}
+
+	input[name="fName"]{
+		border: solid #9B26B0;
+	}
+
+	input[name="lName"]{
+		border: solid #9B26B0;
+	}
+	input[name="contactPref"]{
+		border: solid #9B26B0;
+	}
+
+	.radio-input{
+		border: solid #9B26B0;
+	}
+}
+
+/*Medium Screen*/
+
+@media only screen and (min-width: 700px) {
+
+	
+	
+	#skip{
+		position:absolute;
+		left:-10000px;
+		top:auto;
+		width:1px;
+		height:1px;
+		overflow:hidden;
+	}
+	
+	header{
+		background-image: linear-gradient(#55BCD5 75%, white);
+	}
+	h1{
+		font-size: 50px;
+		padding: 0.5em;
+		font-family: 'Molle', cursive;
+		margin: auto;
+	}
+	label[for="toggle"]{
+		display: none;
+	}
+
+	nav ul{
+		display: block;
+		margin: auto;
+	}
+	nav li{
+		display: inline-block;
+		margin: auto;
+		padding: 10px;
+		background-color: white;
+		position: relative;
+	
+	}
+	nav a{
+		display: block;
+		padding: 1rem;
+		text-decoration: none;
+		text-align: right;
+		background-color: white;
+		color: black;
+		font-weight: bold;
+		margin: 0.5rem auto;
+		width: calc(100% - 2rem);
+		max-width: 350px;
+		
+	}
+	
+	nav a:hover{ 
+		background-color: #F6D64A;
+		cursor: pointer; 
+		color: #000000; 
+	} 
+	
+	.sr-only{
+		position:absolute;
+		left:-10000px;
+		top:auto;
+		width:1px;
+		height:1px;
+		overflow:hidden;
+	
+	}
+	
+	
+	#intro h2{
+		font-family: 'Molle', cursive;
+		font-size: 30px;
+		padding-top: 20px;
+	}
+	
+	#menu{
+		background-color:#F6D64A;
+		float: right;
+	}
+		
+	
+	p, q{
+		font-family: 'Montserrat', sans-serif;
+	}
+	
+	#plan{
+		background-color:#F6D64A;
+		display: grid;
+	}
+	#plan section{
+		display: inline-grid;
+		grid-template-columns:40% 40%;
+	}
+		#plan h3{
+		font-family: 'Molle', cursive;
+		font-size: 30px;
+		text-align: center;
+	}
+	
+	#plan h4{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 20px;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+	
+	#testimonials{
+		align-content: center;
+		display:flex;
+	}
+	
+
+	#testimonials h3{
+		font-family: 'Molle', cursive;
+		font-size: 30px;
+	text-align: center;
+	}
+	
+	#testimonials h4{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 30px;
+		text-align: center;
+		font-weight: bold;
+	}
+}
+
+/* Desktop Design*/
+
+@media only screen and (min-width: 1020px) {
+
+	#skip{
+		position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	}
+
+	header{
+		background-image: linear-gradient(#55BCD5, white);
+	}
+	label[for="toggle"]
+	nav{
+		position: absolute;
+		top:0;
+		right:0;
+		z-index:9999;
+		display: block;
+	}
+	nav li{
+		display: inline-block;
+		padding: 5px;
+		background-color: white;
+		position: relative;
+
+	}
+	nav a{
+		display: block;
+		padding: 1rem;
+		text-decoration: none;
+		background-color: white;
+		color: black;
+		font-weight: bold;
+		margin: 0.5rem auto;
+		width: calc(100% - 2rem);
+		max-width: 350px;
+		
+	}
+
+	nav a:hover{ 
+		background-color: #F6D64A;
+		cursor: pointer; 
+		color: #000000; 
+	} 
+
+	#toggle{
+		display: none;
+	}
+
+	h1{
+		font-size: 50px;
+		padding: 0.5em;
+		font-family: 'Molle', cursive;
+	}
+
+	.sr-only{
+		position:absolute;
+		left:-10000px;
+		top:auto;
+		width:1px;
+		height:1px;
+		overflow:hidden;
+
+	}
+
+	#intro{
+		display: grid;
+		grid-template-columns: 40% 60%;
+		grid-template-rows: 7ex auto;
+		
+	}
+
+	#intro h2, #intro p{
+		grid-column: 1/2;
+		margin:0;
+		padding: 0;
+	}
+
+	#menu{
+		background-color:#F6D64A;
+		float: right;
+	}
+	
+
+	p, q{
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	#plan{
+		background-color:#F6D64A;
+		padding-top: 20px;
+	}
+
+	#plan h3{
+		font-family: 'Molle', cursive;
+		font-size: 30px;
+		text-align: center;
+		padding-bottom: 40px;
+	}
+
+	#plan h4{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 20px;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: -60px;
+	}
+	#plan div {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 25em;
+	}
+
+	#plan img{
+	max-height: 80%;
+	max-width: 60%;
+	padding-top:50px;
+	margin-top: 20px;
+	}
+
+	#testimonials{
+		margin: 0 auto;
+		padding-top: 60px;
+		padding-bottom: 100px;
+		align-items: center;
+	}
+
+	#testimonials div{
+		margin: 0 auto;
+		align-items: center;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 12em;
+
+	}
+
+	#testimonials
+
+	#testimonials section{
+		padding-bottom: 50px;
+	}
+
+	img[src="images/get.svg"]{
+		background-color:#55BCD5;
+		border-radius: 10px;
+		padding: 10px;
+		border: solid white 3px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img[src="images/stay.svg"]{
+		background-color:#55BCD5;
+		padding: 10px;
+		border: solid white 3px;
+		border-radius: 10px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img[src="images/do.svg"]{
+		background-color:#55BCD5;
+		padding: 10px;
+		border: solid white 3px;
+		border-radius: 10px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img[src="images/eat.svg"]{
+		background-color:#55BCD5;
+		padding: 10px;
+		border: solid white 3px;
+		border-radius: 10px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img[src="images/miranda-blake.png"]{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img[src="images/max-winter.png"]{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img[src="images/carmen-lorenzo.png"]{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img[src="images/ines-villegoes.png"]{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#testimonials h3{
+		font-family: 'Molle', cursive;
+		font-size: 30px;
+	text-align: center;
+	}
+
+	#testimonials h4{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 30px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	#testimonials p{
+		text-align: center;
+	}
+
+	#testimonials q{
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#about h3{
+		font-family: 'Molle', cursive;
+		font-size: 30px;
+		margin-right: 200px;
+		font-weight: bold;
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+	#about{
+		background-color: #499BD2;
+		display: grid;
+		
+		justify-content: center;
+		gap: .5 em;
+		padding-top:100px;
+		padding-bottom: 100px;
+		}
+	}
+
+	#about div{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 50px;
+		
+		
+	}
+
+.form-required{
+	border:#9B26B0 solid,
+}
